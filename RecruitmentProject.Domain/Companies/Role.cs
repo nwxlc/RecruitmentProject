@@ -1,4 +1,4 @@
-namespace RecruitmentProject.Domain;
+namespace RecruitmentProject.Domain.Companies;
 
 public class Role
 {
@@ -13,8 +13,8 @@ public class Role
 
     public static Role Create(string name)
     {
-        ArgumentNullException.ThrowIfNull(name);
+        ArgumentException.ThrowIfNullOrWhiteSpace(name);
 
-        return new Role(new Guid(), name);
+        return new Role(Guid.NewGuid(), name);
     }
 }

@@ -1,4 +1,6 @@
-namespace RecruitmentProject.Domain;
+using RecruitmentProject.Domain.Candidates;
+
+namespace RecruitmentProject.Domain.Vacancies;
 
 public class VacancyWorkflowStep
 {

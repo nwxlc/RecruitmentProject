@@ -1,4 +1,4 @@
-namespace RecruitmentProject.Domain;
+namespace RecruitmentProject.Domain.Candidates;
 
 public enum Status
 {
