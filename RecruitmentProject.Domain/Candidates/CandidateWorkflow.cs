@@ -1,4 +1,6 @@
-namespace RecruitmentProject.Domain;
+using RecruitmentProject.Domain.Companies;
+
+namespace RecruitmentProject.Domain.Candidates;
 
 public class CandidateWorkflow
 {

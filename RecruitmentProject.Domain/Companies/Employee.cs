@@ -1,4 +1,4 @@
-namespace RecruitmentProject.Domain;
+namespace RecruitmentProject.Domain.Companies;
 
 public class Employee
 {
@@ -17,8 +17,20 @@ public class Employee
 
     public static Employee Create(string name, Guid companyId, Guid roleId)
     {
-        ArgumentNullException.ThrowIfNull(name);
+        ArgumentException.ThrowIfNullOrWhiteSpace(name);
+        ArgumentNullException.ThrowIfNull(companyId);
+        ArgumentNullException.ThrowIfNull(roleId);
+        
+        if (companyId == Guid.Empty)
+        {
+            throw new ArgumentException("CompanyId cannot be empty", nameof(companyId));
+        }
+        
+        if (roleId == Guid.Empty)
+        {
+            throw new ArgumentException("RoleId cannot be empty", nameof(roleId));
+        }
 
-        return new Employee(new Guid(), name, companyId, roleId);
+        return new Employee(Guid.NewGuid(), name, companyId, roleId);
     }
 }

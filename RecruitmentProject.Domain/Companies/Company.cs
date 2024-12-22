@@ -1,4 +1,4 @@
-namespace RecruitmentProject.Domain;
+namespace RecruitmentProject.Domain.Companies;
 
 public class Company
 {
@@ -18,7 +18,7 @@ public class Company
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
         ArgumentException.ThrowIfNullOrWhiteSpace(description);
 
-        var company = new Company(new Guid(), name, description);
+        var company = new Company(Guid.NewGuid(), name, description);
 
         return company;
     }
@@ -26,12 +26,14 @@ public class Company
     public void SetName(string name)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(name);
+        
         Name = name;
     }
     
     public void SetDescription(string description)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(description);
+        
         Description = description;
     }
 }

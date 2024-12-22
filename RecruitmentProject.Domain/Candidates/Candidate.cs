@@ -1,4 +1,6 @@
-namespace RecruitmentProject.Domain;
+using RecruitmentProject.Domain.Companies;
+
+namespace RecruitmentProject.Domain.Candidates;
 
 public class Candidate
 {
@@ -21,7 +23,7 @@ public class Candidate
     public CandidateWorkflow Workflow { get; private set; }
     public CandidateDocument Document { get; private set; }
 
-    public static Candidate Create(Guid vacancyId, Guid? referralId, CandidateWorkflow workflow,
+    public static Candidate Create(Guid? vacancyId, Guid? referralId, CandidateWorkflow workflow,
         CandidateDocument document)
     {
         ArgumentNullException.ThrowIfNull(workflow);
