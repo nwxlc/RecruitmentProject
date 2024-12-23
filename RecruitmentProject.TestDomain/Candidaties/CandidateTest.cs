@@ -44,6 +44,7 @@ public class CandidateTest
         candidate.Approve(employee, feedback);
 
         // Assert
+        candidate.Workflow.Steps.Count(x => x.Status == Status.Approved).Should().NotBe(approvesCount);
         candidate.Workflow.Steps.Count(x => x.Status == Status.Approved).Should().Be(approvesCount + 1);
     }
     

@@ -4,7 +4,7 @@ namespace RecruitmentProject.Domain.Candidates;
 
 public class CandidateWorkflowStep
 {
-    public CandidateWorkflowStep(Guid? userId, Guid? roleId, int stepNumber, string description, Status status)
+    private CandidateWorkflowStep(Guid? userId, Guid? roleId, int stepNumber, string description, Status status)
     {
         UserId = userId;
         RoleId = roleId;
