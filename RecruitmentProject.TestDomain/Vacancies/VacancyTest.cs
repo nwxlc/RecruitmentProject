@@ -57,10 +57,9 @@ public class VacancyTest
     }
     
     [Fact]
-    public void WorkflowTemplate_CreateCandidate_ShouldCreateCandidateWithCorrectParameters()
+    public void Vacancy_CreateCandidate_ShouldCreateCandidateWithCorrectParameters()
     {
         //Arrange
-        var id = Guid.NewGuid(); 
         var name = "Sample vacancy";
         var description = "Sample description";
         var steps = _fixture.CreateMany<VacancyWorkflowStep>();
